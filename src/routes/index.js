@@ -4,14 +4,15 @@ import Following from '~/pages/Following';
 import Profile from '~/pages/Profile';
 import Upload from '~/pages/Upload';
 import Search from '~/pages/Search';
+import routesConfig from '~/config/route'
 
 
 const publicRoutes = [
-    { path: '/', componenet: Home },
-    { path: '/following', componenet: Following },
-    { path: '/@:nickname', componenet: Profile },
-    { path: '/upload', componenet: Upload, layout: HeaderOnly },
-    { path: '/search', componenet: Search, layout: null },
+    { path: routesConfig.home, componenet: Home },
+    { path: routesConfig.following, componenet: Following },
+    { path: routesConfig.profile, componenet: Profile },
+    { path: routesConfig.upload, componenet: Upload, layout: HeaderOnly },
+    { path: routesConfig.search, componenet: Search, layout: null },
 ]
 
 const privateRoutes = [
